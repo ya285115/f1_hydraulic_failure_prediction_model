@@ -1,5 +1,11 @@
-##F1 Hydraulic Failure Prediction System — Race-Critical Analytics
+🏁 : **F1 Hydraulic Failure Prediction System — Race-Critical Analytics**
+
+
 Production-grade predictive maintenance pipeline preventing race-ending hydraulic failures through real-time telemetry analysis
+
+
+
+
 1. Core Capabilities
 
 Real-time telemetry processing — 17 sensor parameters at racing speeds with <100ms prediction latency
