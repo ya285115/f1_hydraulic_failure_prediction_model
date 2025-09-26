@@ -1,30 +1,48 @@
-🏁 : **F1 Hydraulic Failure Prediction System — Race-Critical Analytics**
+# 🏎️ F1-Grade Hydraulic Failure Prediction System
 
+**Advanced ML Pipeline for Safety-Critical Industrial Applications**
 
-Production-grade predictive maintenance pipeline preventing race-ending hydraulic failures through real-time telemetry analysis
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
+[![F1-Score](https://img.shields.io/badge/F1--Score-34.7%25-green.svg)](https://github.com/yourusername/f1-hydraulic-failure-prediction)
 
+## **Technical Summary**
 
+Advanced machine learning system for hydraulic failure prediction with direct applications to Formula 1 brake systems, power steering, and DRS mechanisms. Implements ensemble learning with statistical validation for safety-critical environments.
 
+### **Key Achievements**
+- **Best Model**: Gradient Boosting (F1: 34.7%)
+- **Dataset**: 2,205 samples, 17 sensors (UCI standard)  
+- **Statistical Validation**: Monte Carlo 95% CI [29.9%, 39.7%]
+- **Production Pipeline**: Complete MLOps architecture
+- **Feature Engineering**: PCA dimensionality reduction (95% variance retained)
 
-1. Core Capabilities
+### **Performance Metrics**
+| Model | Test F1 | Accuracy | Status |
+|-------|---------|----------|--------|
+| **Gradient Boosting** | **0.347** | **0.460** | **Best** |
+| Decision Tree | 0.330 | 0.424 | - |
+| KNN | 0.318 | 0.433 | - |
+| CatBoost | 0.317 | 0.449 | - |
+| XGBoost | 0.311 | 0.424 | - |
 
-Real-time telemetry processing — 17 sensor parameters at racing speeds with <100ms prediction latency
-Advanced ML ensemble — 11-algorithm benchmark (Gradient Boosting achieving 46% accuracy, 35% F1-score)
-Statistical validation framework — 500-iteration Monte Carlo simulation with 95% confidence intervals [29.9%-39.7%]
-Class imbalance optimization — SMOTE resampling achieving 10% performance improvement over baseline models
-Explainable AI deployment — SHAP analysis for race engineer decision support and component failure attribution
+### **Monte Carlo Reliability Analysis**
+- **Mean F1**: 34.59% ± 2.53%
+- **95% Confidence**: [29.92%, 39.66%]
+- **Reliability Status**: Research-grade (requires optimization for production)
 
-2. Performance Metrics
+## **Technical Architecture**
 
-Model Accuracy: 46.0% (Gradient Boosting champion)
-Cross-validation stability: 3-fold CV with <2.5% variance
-Feature dimensionality: 95% variance retention through PCA (16/17 components)
-Prediction reliability: 34.6% ± 2.5% F1-score across Monte Carlo iterations
-Data completeness: 100% (2,205 samples, zero missing values)
+---
+1. **Data Pipeline:**
+   - **Input Dataset:** UCI Dataset (Size: 2,205 rows × 17 features).
 
-3. Racing Applications
+2. **Feature Engineering:**
+   - **Preprocessing:** Applied PCA (Principal Component Analysis) for dimensionality reduction, preserving 95% of the variance.
 
-Pre-race system verification — Component health scoring before formation lap
-Pit-stop optimization — Early failure detection for strategic component replacement
-Race strategy support — Real-time failure probability updates for race engineers
-Post-race analysis — Root cause identification and predictive maintenance scheduling
+3. **Model Training:**
+   - **Algorithms:** Trained models using 11 machine learning algorithms.
+   - **Optimization:** Grid Search CV for hyperparameter tuning.
+
+4. **Validation:**
+   - **Monte Carlo Simulation:** Validated models using 500 iterations for robust performance evaluation.
